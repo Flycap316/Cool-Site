@@ -1,0 +1,82 @@
+/* Cool & Unusual studio site – MOCKUP v2.4. Mobile-first. Tokens per Monica's Visual Kit v1.0 §1/§4. */
+:root{
+ --font-display:"Cinzel Decorative","Cinzel",Georgia,serif; /* hero + big titles */
+ --font-heading:"Cinzel",Georgia,serif; /* weight 700 */
+ --font-body:"Inter",system-ui,sans-serif;
+ --font-accent:"Cormorant Garamond",Georgia,serif; /* italic, sparing – Fly quote only */
+ --cu-void:#120E18;--cu-amethyst:#281E47;--cu-violet:#7861FF;--cu-gold:#FFB300;--cu-parchment:#E6E2D9;
+ --cu-void-90:rgba(18,14,24,.9);--cu-line:rgba(230,226,217,.15);
+ --cu-gold-dk:#E6A100; /* Gold hover – provisional kit token (Monica), pending Fly review */
+ --cu-crimson:#C0353F; /* danger only – provisional kit token (Monica), pending Fly review */
+ --cu-violet-text:#8F7CFF; /* text only: kit violet is 3.6:1 on Amethyst; this clears WCAG AA (~4.8:1) */
+ --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:40px;--s6:64px;
+ --r-btn:8px;--r-card:12px;--max:1200px}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.6;background:var(--cu-void);color:var(--cu-parchment)}
+a{color:var(--cu-violet-text)}
+:focus-visible{outline:2px solid var(--cu-violet);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--s3)}
+img{max-width:100%;height:auto}
+.pixel{image-rendering:pixelated}
+/* 18+ bar */
+.notice{background:var(--cu-amethyst);font-size:14px;padding:var(--s2) 0;min-height:36px}
+.notice label{float:right;cursor:pointer;padding:0 var(--s2);min-height:44px;min-width:44px;text-align:center}
+.notice-toggle:checked + .notice{display:none}
+header{background:var(--cu-void);padding:var(--s2) 0;border-bottom:1px solid var(--cu-line)}
+header .wrap{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;justify-content:space-between}
+.logo img{width:150px;height:auto;display:block}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1);flex:1 1 auto;min-width:min(100%,18rem)}
+nav a{color:var(--cu-parchment);text-decoration:none;padding:10px var(--s2);min-height:44px;display:inline-flex;align-items:center}
+nav a[aria-current]{color:var(--cu-violet-text);text-decoration:underline}
+.join{display:inline-flex;flex-direction:column;align-items:center;gap:var(--s1);vertical-align:top;flex:0 0 auto;max-width:100%}
+.join .btn{white-space:nowrap}
+.join .tbd{text-align:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 var(--s4);border-radius:var(--r-btn);background:var(--cu-gold);color:var(--cu-void);font-weight:700;text-decoration:none;border:2px solid var(--cu-gold)} /* Void on Gold ≈ 10.9:1, WCAG AAA */
+.btn:hover{background:var(--cu-gold-dk);border-color:var(--cu-gold-dk);color:var(--cu-void)} /* ≈ 8.8:1 */
+.btn.secondary{background:transparent;color:var(--cu-parchment);border-color:var(--cu-violet)}
+.btn.secondary:hover{background:rgba(120,97,255,.15)}
+main{padding:var(--s4) 0}
+.panel{background:var(--cu-amethyst);border:1px solid var(--cu-violet);border-radius:var(--r-card);padding:var(--s3);margin:var(--s3) 0}
+.card:hover{box-shadow:0 0 24px rgba(120,97,255,.35)}
+.card img{border-radius:var(--s2);display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.grid{display:grid;gap:var(--s3)}
+.hero{margin:0 0 var(--s4)}
+.hero img{display:block;width:100%;border-radius:var(--r-card)}
+.label{display:inline-block;background:var(--cu-void-90);border:1px dashed var(--cu-violet);color:var(--cu-parchment);font-size:14px;padding:var(--s1) var(--s2);border-radius:var(--s1);margin:var(--s2) 0}
+.caption{font-size:13px;color:rgba(230,226,217,.8);margin:var(--s1) 0 0}
+.ph{border:2px dashed var(--cu-line);color:rgba(230,226,217,.8);padding:var(--s3);font-size:14px;text-align:center;border-radius:var(--s2);margin:var(--s2) 0;overflow-wrap:break-word}
+.ph-img{aspect-ratio:16/9;display:grid;grid-template-columns:minmax(0,1fr);align-items:center;justify-items:center}
+.tbd{display:inline-block;border:2px dashed var(--cu-parchment);padding:0 var(--s2);font-size:14px;border-radius:var(--s1)}
+.tag{display:inline-block;font-size:13px;padding:2px var(--s2);border-radius:var(--s1);border:1px solid var(--cu-violet);margin:0 var(--s1) var(--s2) 0}
+.tag.rare{background:var(--cu-gold);color:var(--cu-void);border-color:var(--cu-gold)}
+.danger{color:var(--cu-crimson)}
+h1{font-family:var(--font-display);font-weight:700}
+h2,h3{font-family:var(--font-heading);font-weight:700}
+.accent{font-family:var(--font-accent);font-style:italic;font-weight:500;font-size:1.3em}
+h1{font-size:28px;line-height:1.2;margin:var(--s3) 0}h2{font-size:22px;margin:var(--s3) 0 var(--s2)}
+.card h2{color:var(--cu-gold)}
+blockquote{border-left:4px solid var(--cu-violet);margin:var(--s3) 0;padding-left:var(--s3)}
+ul.list{padding-left:var(--s4)}ul.list li{margin:var(--s1) 0}
+.small{font-size:14px;color:rgba(230,226,217,.8)}
+.discord-mark{width:96px;height:96px;object-fit:contain;float:right;margin:0 0 var(--s2) var(--s3)}
+.thumbs{display:grid;gap:var(--s3);grid-template-columns:1fr}
+.thumbs figure{margin:0}.thumbs img{width:100%;max-width:480px;aspect-ratio:16/9;object-fit:contain;background:var(--cu-amethyst);border:1px solid var(--cu-line);border-radius:var(--s2);padding:var(--s2)}
+dl.facts dt{font-weight:700;margin-top:var(--s2)}dl.facts dd{margin:0}
+footer{background:var(--cu-amethyst);padding:var(--s4) 0;font-size:14px;border-top:1px solid var(--cu-line)}
+footer .flogo{width:120px;display:block;margin-bottom:var(--s3)}
+footer a{color:var(--cu-parchment);display:inline-block;padding:10px var(--s1);min-height:44px}
+.age{border-left:4px solid var(--cu-violet);padding-left:var(--s2)}
+@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}.thumbs{grid-template-columns:1fr 1fr}h1{font-size:36px}.logo img{width:240px}}
+
+/* v2.2 – clean art with live-text labels */
+.art{position:relative;margin:0}
+.art img{display:block;width:100%}
+.card .art img{aspect-ratio:16/9;object-fit:cover;border-radius:var(--s2)}
+.art-label{position:absolute;left:var(--s2);bottom:var(--s2);background:var(--cu-void-90);color:rgba(230,226,217,.9);font-size:13px;padding:2px var(--s2);border-radius:var(--s1)}
+.hero-b{position:relative;border-radius:var(--r-card);overflow:hidden;margin:0 0 var(--s4);min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;
+ background:linear-gradient(rgba(18,14,24,.6),rgba(18,14,24,.6)),url(assets/hero-B-clean-plate-mobile-1080x1920.png) center/cover no-repeat var(--cu-void)}
+.hero-b-in{padding:var(--s5) var(--s3);max-width:800px}
+.hero-b-in .btn.secondary{vertical-align:top}
+.hero-logo{width:min(80vw,480px);height:auto}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+@media(min-width:720px){.hero-b{min-height:0;aspect-ratio:16/9;background-image:linear-gradient(rgba(18,14,24,.6),rgba(18,14,24,.6)),url(assets/hero-B-clean-plate-desktop-1920x1080.png)}}
